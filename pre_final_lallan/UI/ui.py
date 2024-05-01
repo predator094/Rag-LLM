@@ -37,7 +37,11 @@ try:
     # Load chat engine
     if "rag_chain" not in st.session_state:
         st.session_state.rag_chain = FastAPIChatClient(
+<<<<<<< HEAD
             base_url="https://2150-103-157-195-111.ngrok-free.app/"
+=======
+            base_url="https://38ec-103-157-195-111.ngrok-free.app/"
+>>>>>>> 0a9c3e5fbf27b82b1c8d6b7afb5ad64ce34f4d86
         )
 
     # Load previous messages and email
@@ -83,7 +87,11 @@ try:
         st.chat_message("user").markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.spinner("Processing..."):
+<<<<<<< HEAD
             ob = FastAPIChatClient("https://cdeb-27-60-87-50.ngrok-free.app")
+=======
+            ob = FastAPIChatClient("https://38ec-103-157-195-111.ngrok-free.app/")
+>>>>>>> 0a9c3e5fbf27b82b1c8d6b7afb5ad64ce34f4d86
             a = ob.chat(st.session_state.email.split("@")[0], prompt)
         with st.chat_message("assistant"):
             st.markdown(a)

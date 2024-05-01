@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 queries/
 recorded_data/
+pre_final_lallan\UI\test.py
